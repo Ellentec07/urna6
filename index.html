@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Urna Eletrônica</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container" id="telaCPF">
+      <div class="caixa-cpf">
+        <h1>URNA ELETRÔNICA</h1>
+
+        <h2>Identificação do eleitor</h2>
+
+        <p>Digite seu CPF:</p>
+
+        <input type="text" id="cpf" maxlength="11" placeholder="Digite o CPF" />
+
+        <button class="botao-cpf" onclick="entrarNaUrna()">
+          CONFIRMAR CPF
+        </button>
+
+        <p id="mensagemCPF"></p>
+      </div>
+    </div>
+
+    <div class="container urna-container" id="telaUrna">
+      <div class="urna">
+        <div class="tela">
+          <h3>SEU VOTO PARA</h3>
+        
+        
+
+          <h1>PRESIDENTE</h1>
+
+          <p>Número:</p>
+
+          <div class="visor">
+            <span id="numero"></span>
+          </div>
+
+          <div class="candidato">
+            <img id="foto" src="" alt="Foto do candidato" />
+
+            <div class="dados">
+              <h2 id="nome"></h2>
+
+              <p id="partido"></p>
+            </div>
+          </div>
+
+          <div id="mensagem"></div>
+        </div>
+
+        <div class="teclado">
+          <button onclick="digitarNumero('1')">1</button>
+          <button onclick="digitarNumero('2')">2</button>
+          <button onclick="digitarNumero('3')">3</button>
+
+          <button onclick="digitarNumero('4')">4</button>
+          <button onclick="digitarNumero('5')">5</button>
+          <button onclick="digitarNumero('6')">6</button>
+
+          <button onclick="digitarNumero('7')">7</button>
+          <button onclick="digitarNumero('8')">8</button>
+          <button onclick="digitarNumero('9')">9</button>
+
+          <div></div>
+
+          <button onclick="digitarNumero('0')">0</button>
+
+          <div></div>
+
+          <button class="branco" onclick="votoBranco()">BRANCO</button>
+
+          <button class="corrige" onclick="corrigir()">CORRIGE</button>
+
+          <button class="confirma" onclick="confirmar()"><a href="http://127.0.0.1:5500/index1.html">CONFIRMA</a></button>
+        </div>
+      </div>
+    </div>
+
+
+
+    <script src="script.js"></script>
+  </body>
+</html>

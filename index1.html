@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GOVERNADOR</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+     <div class="tela">
+      <h3>SEU VOTO PARA</h3>
+
+      <h1>GOVERNADOR</h1>
+
+      <p>Número:</p>
+
+      <div class="visor">
+        <span id="numero"></span>
+      </div>
+
+      <div class="candidato">
+        <img id="foto" src="" alt="Foto do candidato" />
+
+        <div class="dados">
+          <h2 id="nome"></h2>
+          <p id="partido"></p>
+        </div>
+      </div>
+
+      <div id="mensagem"></div>
+    </div>
+
+    <div class="teclado">
+      <button onclick="digitarNumero('1')">1</button>
+      <button onclick="digitarNumero('2')">2</button>
+      <button onclick="digitarNumero('3')">3</button>
+
+      <button onclick="digitarNumero('4')">4</button>
+      <button onclick="digitarNumero('5')">5</button>
+      <button onclick="digitarNumero('6')">6</button>
+
+      <button onclick="digitarNumero('7')">7</button>
+      <button onclick="digitarNumero('8')">8</button>
+      <button onclick="digitarNumero('9')">9</button>
+
+      <div></div>
+
+      <button onclick="digitarNumero('0')">0</button>
+
+      <div></div>
+
+      <button class="branco" onclick="votoBranco()">BRANCO</button>
+
+      <button class="corrige" onclick="corrigir()">CORRIGE</button>
+
+      <button class="confirma" onclick="confirmarGovernador()">CONFIRMA</button>
+    </div>
+
+  </div>
+</div>
+
+ <script src="script1.js"></script>
+</body>
+</html>

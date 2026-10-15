@@ -1,0 +1,209 @@
+/* Configurações gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    padding: 20px;
+    background: #d9d9d9;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Corpo da urna */
+.tela {
+    width: 520px;
+    min-height: 350px;
+    padding: 30px;
+    background: #f1f0e8;
+    border: 10px solid #252525;
+    border-radius: 8px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+    color: #111;
+}
+
+.tela h3 {
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 8px;
+}
+
+.tela h1 {
+    font-size: 30px;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+.tela > p {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+/* Visor dos números */
+.visor {
+    display: flex;
+    align-items: center;
+    min-height: 55px;
+    padding: 8px 12px;
+    margin-bottom: 20px;
+    background: #fff;
+    border: 2px solid #777;
+    color: #111;
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 12px;
+}
+
+/* Informações do candidato */
+.candidato {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    min-height: 110px;
+    margin-bottom: 15px;
+}
+
+.candidato img {
+    width: 100px;
+    height: 110px;
+    object-fit: cover;
+    border: 2px solid #999;
+    background: #ddd;
+}
+
+.dados h2 {
+    font-size: 21px;
+    margin-bottom: 10px;
+    overflow-wrap: anywhere;
+}
+
+.dados p {
+    font-size: 17px;
+}
+
+/* Mensagens da urna */
+#mensagem {
+    min-height: 25px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #222;
+}
+
+/* Teclado */
+.teclado {
+    width: 310px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    padding: 22px;
+    background: #303030;
+    border: 5px solid #222;
+    border-radius: 10px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+}
+
+/* Botões numéricos */
+.teclado button {
+    min-height: 55px;
+    border: 2px solid #111;
+    border-radius: 5px;
+    background: #171717;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 3px 0 #080808;
+    transition: background 0.15s, transform 0.15s;
+}
+
+.teclado button:hover {
+    background: #444;
+}
+
+.teclado button:active {
+    transform: translateY(3px);
+    box-shadow: none;
+}
+
+/* Botão BRANCO */
+.teclado .branco {
+    grid-column: span 1;
+    background: #fff;
+    color: #111;
+    font-size: 13px;
+}
+
+/* Botão CORRIGE */
+.teclado .corrige {
+    background: #e87524;
+    color: #111;
+    font-size: 13px;
+}
+
+/* Botão CONFIRMA */
+.teclado .confirma {
+    grid-column: span 3;
+    min-height: 65px;
+    background: #24a148;
+    color: #111;
+    font-size: 18px;
+}
+
+.teclado .confirma:hover {
+    background: #2fc45b;
+}
+
+/* Adaptação para celulares */
+@media (max-width: 850px) {
+    body {
+        flex-direction: column;
+        gap: 20px;
+        padding: 15px;
+    }
+
+    .tela {
+        width: 100%;
+        max-width: 520px;
+        padding: 20px;
+        border-width: 7px;
+    }
+
+    .teclado {
+        width: 100%;
+        max-width: 310px;
+    }
+}
+
+@media (max-width: 380px) {
+    .tela h1 {
+        font-size: 25px;
+    }
+
+    .tela {
+        padding: 14px;
+    }
+
+    .candidato {
+        gap: 12px;
+    }
+
+    .candidato img {
+        width: 80px;
+        height: 95px;
+    }
+
+    .dados h2 {
+        font-size: 17px;
+    }
+
+    .teclado {
+        gap: 9px;
+        padding: 15px;
+    }
+}
